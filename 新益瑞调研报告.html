@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>深圳新益瑞企业管理有限公司 · 调研报告</title>
+<style>
+  :root {
+    --primary: #0e7490;
+    --primary-dark: #155e75;
+    --accent: #0e9f6e;
+    --warn: #c81e1e;
+    --bg: #f4f6fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 32px 16px 64px;
+  }
+  .container { max-width: 960px; margin: 0 auto; }
+  .hero {
+    background: linear-gradient(135deg, #155e75 0%, #0e7490 55%, #22b8cf 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 24px rgba(14, 116, 144, .25);
+  }
+  .hero .tag {
+    display: inline-block;
+    background: rgba(255,255,255,.18);
+    border: 1px solid rgba(255,255,255,.35);
+    font-size: 13px;
+    padding: 3px 12px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  .hero h1 { font-size: 30px; letter-spacing: 1px; margin-bottom: 8px; }
+  .hero .sub { font-size: 15px; opacity: .9; }
+  .hero .meta { margin-top: 18px; font-size: 13px; opacity: .8; }
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .kpi {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 14px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,.04);
+  }
+  .kpi .v { font-size: 22px; font-weight: 700; color: var(--primary-dark); }
+  .kpi .l { font-size: 12px; color: var(--muted); margin-top: 4px; }
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  }
+  h2 {
+    font-size: 20px;
+    color: var(--primary-dark);
+    padding-left: 12px;
+    border-left: 4px solid var(--primary);
+    margin-bottom: 18px;
+  }
+  h3 { font-size: 16px; color: var(--text); margin: 18px 0 10px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 10px 0 6px; }
+  th, td { border: 1px solid var(--border); padding: 9px 12px; text-align: left; vertical-align: top; }
+  th { background: #ecfeff; color: var(--primary-dark); font-weight: 600; white-space: nowrap; }
+  tr:nth-child(even) td { background: #fafdff; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  .badge {
+    display: inline-block; font-size: 12px; padding: 1px 9px;
+    border-radius: 999px; margin-right: 6px; font-weight: 600;
+  }
+  .badge-green { background: #def7ec; color: #03543f; }
+  .badge-blue { background: #e1effe; color: #1e429f; }
+  .badge-gray { background: #f3f4f6; color: #374151; }
+  .badge-amber { background: #fef3c7; color: #92400e; }
+  .highlight {
+    background: #fffbeb;
+    border-left: 4px solid #f59e0b;
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  .risk {
+    background: #fef2f2;
+    border-left: 4px solid var(--warn);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  .contact-box {
+    background: #ecfeff;
+    border: 1px dashed #67e8f9;
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  .contact-box b { color: var(--primary-dark); }
+  .src { font-size: 12px; color: var(--muted); margin-top: 14px; }
+  footer { text-align: center; font-size: 12px; color: var(--muted); margin-top: 28px; }
+  @media print {
+    body { background: #fff; padding: 0; }
+    section, .hero, .kpi { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="hero">
+    <span class="tag">企业调研报告</span>
+    <h1>深圳新益瑞企业管理有限公司</h1>
+    <div class="sub">对外品牌 GBC United ｜ 童车 · 自行车 · 婴童用品出口贸易 ｜ 前身广瑞贸易（2005 年创立）</div>
+    <div class="meta">调研日期：2026-10-14 ｜ 数据源：天眼查 · 前程无忧/BOSS直聘 · 香港贸发局 HKTDC · 公司官网</div>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="v">2020 年</div><div class="l">成立（股改重组）</div></div>
+    <div class="kpi"><div class="v">2,000 万</div><div class="l">注册资本</div></div>
+    <div class="kpi"><div class="v">80+ 国</div><div class="l">出口市场覆盖</div></div>
+    <div class="kpi"><div class="v">20+ 年</div><div class="l">童车出口行业积累</div></div>
+    <div class="kpi"><div class="v">39 人</div><div class="l">社保人数</div></div>
+    <div class="kpi"><div class="v">20 个</div><div class="l">在招职位（扩张中）</div></div>
+  </div>
+
+  <!-- 一、公司概况 -->
+  <section>
+    <h2>一、公司概况</h2>
+    <table>
+      <tr><th style="width:130px">公司名称</th><td>深圳新益瑞企业管理有限公司（对外品牌 <b>GBC United</b>）</td></tr>
+      <tr><th>成立日期</th><td>2020-06-05</td></tr>
+      <tr><th>注册资本</th><td>2,000 万人民币（实缴 1,999 万）</td></tr>
+      <tr><th>法定代表人</th><td>欧阳绮君（执行董事兼总经理）</td></tr>
+      <tr><th>注册地址</th><td>深圳市福田区沙头街道天安社区深南大道 6015 号本元大厦 23A</td></tr>
+      <tr><th>官网</th><td><a href="https://www.gbcunited.com" target="_blank">https://www.gbcunited.com</a></td></tr>
+      <tr><th>工商经营范围</th><td>企业管理咨询、货物/技术进出口、电子商务、国内贸易、经济信息咨询、物流信息咨询、非居住房地产租赁</td></tr>
+      <tr><th>实际业务</th><td>童车、自行车及婴童用品（婴儿车、汽车座椅、婴儿床、玩具等）设计、研发、生产、出口一体化国际贸易（OEM 为主）</td></tr>
+      <tr><th>企业前身</th><td>深圳市广瑞贸易发展有限公司（2005 年成立），2020 年员工内部持股股改后成立新益瑞承接业务</td></tr>
+      <tr><th>自有品牌</th><td><span class="badge badge-blue">KATHIE</span><span class="badge badge-blue">MASCOT</span><span class="badge badge-blue">KIDS-GLORY</span> 覆盖 20+ 产品类别的专利与商标</td></tr>
+      <tr><th>市场与展会</th><td>五大洲 80+ 国家和地区；广交会知名品牌区常驻展商；HKTDC 香港婴儿用品展 2023-2027 连续参展</td></tr>
+      <tr><th>团队规模</th><td>社保 39 人；公开招聘信息显示业务团队 20+ 人、后勤跟单团队 30+ 人，江浙/天津/河北设驻外 QC</td></tr>
+    </table>
+  </section>
+
+  <!-- 二、融资与上市 -->
+  <section>
+    <h2>二、融资与上市</h2>
+    <ul>
+      <li><b>未上市、无外部融资记录</b>（天眼查融资历史、上市信息均为空），无资本化运作迹象。</li>
+      <li>架构为典型的「创始人控股 + 员工持股平台」：</li>
+    </ul>
+    <table>
+      <tr><th>股东</th><th>持股比例</th><th>说明</th></tr>
+      <tr><td>深圳新凯合贸易有限公司</td><td>80%</td><td>控股母公司（2020-05-28 成立，法人朱冬梅，同楼 5A02，共用邮箱电话体系，社保 0 人——持股壳公司性质）</td></tr>
+      <tr><td>深圳九派众成投资合伙企业（有限合伙）</td><td>20%</td><td>员工持股平台（2020 年股改设立，对应其公开招聘承诺"在职三年以上优秀业务员有入股奖励机制"）</td></tr>
+    </table>
+  </section>
+
+  <!-- 三、经营情况 -->
+  <section>
+    <h2>三、经营情况：营收与利润</h2>
+    <div class="highlight">
+      <b>非上市民营企业，无公开财务数据</b>——营收、利润均不披露，工商年报财务项也未公示。以下为可侧面推断经营状况的公开信号：
+    </div>
+    <ul>
+      <li>成立 5 年持续存续、按时报送年报（联系电话来源为 2025 年年报）；</li>
+      <li>团队规模稳定：业务 20+ 人、跟单 30+ 人，江浙/天津/河北设驻外 QC；</li>
+      <li>持续参加广交会（<b>知名品牌区</b>，展位门槛和费用较高）与香港婴儿用品展，现金流健康的间接佐证；</li>
+      <li>前身广瑞贸易自 2005 年运营至今，童车出口二十余年，招聘信息自述"传统外贸国内行业翘楚"。</li>
+    </ul>
+    <div class="src">如需确切营收/利润，建议合作前要求对方提供审计报告，或通过中信保做资信调查。</div>
+  </section>
+
+  <!-- 四、增长与扩张 -->
+  <section>
+    <h2>四、增长与扩张信号</h2>
+
+    <h3>① 招聘：外贸业务线放量 <span class="badge badge-green">扩张中</span></h3>
+    <ul>
+      <li>2024-08 至 2026-04 在前程无忧/BOSS 直聘持续发布 <b>20 个职位</b>；</li>
+      <li><b>业务岗为主力</b>：资深外贸业务员 / 外贸业务经理 15-30K、深港两地外贸业务员 15-30K（优先香港永居）、B2B 外贸业务员、外贸助理等；</li>
+      <li><b>小语种方向明显</b>：俄语外贸业务员（对接东欧）、西班牙语外贸销售（拉美）、西/俄语业务助理，2025-06 还在上海急招展会西语翻译；</li>
+      <li>配套岗同步扩张：财务经理 15-25K、财务会计/出纳、船务发运操作员、采购助理、自行车验货员 QC。</li>
+    </ul>
+
+    <h3>② 业务布局</h3>
+    <ul>
+      <li>国内办公室/展厅：深圳、杭州、天津、中山；服务中心：香港、北美；</li>
+      <li>江浙、天津、河北驻外 QC——贴近自行车/童车产业带把控品质；</li>
+      <li>经营范围含"非居住房地产租赁"，本元大厦物业或有自持/转租收益。</li>
+    </ul>
+
+    <h3>③ 行业影响力 <span class="badge badge-amber">细分口碑型</span></h3>
+    <ul>
+      <li>自称"传统贸易国内行业翘楚"；广交会知名品牌区展商、香港贸发局认证参展商（2023-2027 连续 5 届）；</li>
+      <li>无权威排行榜上榜记录，属细分出口贸易领域的老牌口碑企业。</li>
+    </ul>
+
+    <h3>④ CEO 公开活动 <span class="badge badge-gray">低调</span></h3>
+    <ul>
+      <li>欧阳绮君（执行董事/总经理/法人）无公开报道、专访或行业活动记录，典型低调务实的贸易公司风格。</li>
+    </ul>
+  </section>
+
+  <!-- 五、高管及联系方式 -->
+  <section>
+    <h2>五、高管及联系方式</h2>
+    <div class="contact-box">
+      <b>总机：</b>0755-88258801（大陆座机，来源：2025 年年报）<br>
+      <b>母公司同址总机：</b>0755-88258846（新凯合贸易）<br>
+      <b>邮箱：</b>ac01@gbcunited.com（主邮箱，2025 年报）｜ 2853858021@qq.com ｜ 2850617940@qq.com<br>
+      <b>官网：</b>https://www.gbcunited.com<br>
+      <b>地址：</b>深圳市福田区深南大道 6015 号本元大厦 23A
+    </div>
+    <h3>主要人员</h3>
+    <table>
+      <tr><th>姓名</th><th>职务</th><th>备注</th></tr>
+      <tr><td>欧阳绮君</td><td>执行董事、总经理</td><td>法定代表人</td></tr>
+      <tr><td>邓亮平</td><td>监事</td><td>—</td></tr>
+      <tr><td>朱冬梅</td><td>（关联）</td><td>控股股东新凯合贸易的法定代表人</td></tr>
+    </table>
+    <div class="highlight">
+      <b>HR 联系方式：</b>无公开直线。建议拨打总机 0755-88258801 转人力资源部；其 HR 在 BOSS 直聘、前程无忧平台活跃（公司主页持续更新招聘），也可直接通过招聘平台沟通。<br>
+      说明：工商公示仅含企业对外公开联系方式，不含高管个人手机号。
+    </div>
+  </section>
+
+  <!-- 六、上下游 -->
+  <section>
+    <h2>六、上下游及关联公司</h2>
+
+    <h3>商业模式定位</h3>
+    <p>新益瑞（GBC United）是<b>中间贸易商</b>：上游对接国内制造工厂，下游对接国外批发商，赚取一站式外贸服务（订单、设计、研发、品质、出运、单证）价值。</p>
+
+    <h3>上游（供应端）</h3>
+    <ul>
+      <li>数百家国内合作制造厂商（自行车、童车、婴童用品工厂），分布于江浙、天津、河北产业带，公司在三地设驻外 QC；</li>
+      <li>生产以 OEM 代工合作为主，自身不直接设厂。</li>
+    </ul>
+
+    <h3>下游（客户端）</h3>
+    <ul>
+      <li>国外批发商/进口商为主，覆盖五大洲 80+ 国家和地区；</li>
+      <li>重点市场：欧美（英语线）、东欧（俄语线，2025 年起重点扩编）、拉美（西语线）；</li>
+      <li>获客渠道：广交会知名品牌区、HKTDC 香港婴儿用品展、海外客户拜访。</li>
+    </ul>
+
+    <h3>关联公司</h3>
+    <table>
+      <tr><th>主体</th><th>关系</th><th>说明</th></tr>
+      <tr><td>深圳新凯合贸易有限公司</td><td>控股股东（80%）</td><td>持股平台性质，法人朱冬梅，同楼 5A02</td></tr>
+      <tr><td>深圳九派众成投资合伙企业（有限合伙）</td><td>股东（20%）</td><td>员工持股平台</td></tr>
+      <tr><td>深圳市广瑞贸易发展有限公司</td><td>前身公司</td><td>2005 年成立，2020 年股改后业务由新益瑞承接</td></tr>
+      <tr><td>香港 / 北美服务中心</td><td>海外服务点</td><td>非独立法人信息未公开</td></tr>
+    </table>
+  </section>
+
+  <!-- 七、风险提示 -->
+  <section>
+    <h2>七、风险提示</h2>
+    <div class="risk">
+      <ol style="padding-left:20px">
+        <li><b>财务不透明：</b>非上市企业，营收利润无公开渠道可查，合作前建议要求提供审计报告或通过中信保资信调查；</li>
+        <li>贸易型公司无自有工厂，供应链依赖外协厂商，订单品质依赖其 QC 体系；</li>
+        <li>出口占比高，受海外需求、汇率、关税政策（如美国婴童用品关税）影响直接；</li>
+        <li>社保人数（39 人）与自述团队规模（50+ 人）存在差异，部分人员可能挂在关联公司或灵活用工，合作/入职前可核实。</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer>
+    数据来源：天眼查（工商信息-企业基本信息/主要人员/企业股东、经营信息-企业招聘，数据更新至 2026-09）｜
+    BOSS 直聘 / 前程无忧 / 应届生求职网 / 才汇云（2024-12 至 2026-07 招聘信息）｜ 香港贸发局 HKTDC 参展商页面 ｜ 公司官网 gbcunited.com<br>
+    本报告基于公开信息整理，仅供商务参考，不构成投资建议。
+  </footer>
+
+</div>
+</body>
+</html>

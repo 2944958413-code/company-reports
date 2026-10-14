@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>深圳麦思美汽车电子股份有限公司 · 调研报告</title>
+<style>
+  :root {
+    --primary: #1a56db;
+    --primary-dark: #1e429f;
+    --accent: #0e9f6e;
+    --warn: #c81e1e;
+    --bg: #f4f6fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 32px 16px 64px;
+  }
+  .container { max-width: 960px; margin: 0 auto; }
+
+  /* 头部 */
+  .hero {
+    background: linear-gradient(135deg, #1e429f 0%, #1a56db 55%, #3f83f8 100%);
+    color: #fff;
+    border-radius: 16px;
+    padding: 40px 36px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 24px rgba(26, 86, 219, .25);
+  }
+  .hero .tag {
+    display: inline-block;
+    background: rgba(255,255,255,.18);
+    border: 1px solid rgba(255,255,255,.35);
+    font-size: 13px;
+    padding: 3px 12px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+  .hero h1 { font-size: 30px; letter-spacing: 1px; margin-bottom: 8px; }
+  .hero .sub { font-size: 15px; opacity: .9; }
+  .hero .meta { margin-top: 18px; font-size: 13px; opacity: .8; }
+
+  /* KPI 卡片 */
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .kpi {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 14px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,.04);
+  }
+  .kpi .v { font-size: 22px; font-weight: 700; color: var(--primary-dark); }
+  .kpi .v.down { color: var(--warn); }
+  .kpi .l { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+  /* 章节卡片 */
+  section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 30px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.04);
+  }
+  h2 {
+    font-size: 20px;
+    color: var(--primary-dark);
+    padding-left: 12px;
+    border-left: 4px solid var(--primary);
+    margin-bottom: 18px;
+  }
+  h3 { font-size: 16px; color: var(--text); margin: 18px 0 10px; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 10px 0 6px;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 9px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: #eef2ff; color: var(--primary-dark); font-weight: 600; white-space: nowrap; }
+  tr:nth-child(even) td { background: #fafbff; }
+
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+
+  .badge {
+    display: inline-block; font-size: 12px; padding: 1px 9px;
+    border-radius: 999px; margin-right: 6px; font-weight: 600;
+  }
+  .badge-green { background: #def7ec; color: #03543f; }
+  .badge-red { background: #fde8e8; color: #9b1c1c; }
+  .badge-blue { background: #e1effe; color: #1e429f; }
+  .badge-gray { background: #f3f4f6; color: #374151; }
+
+  .highlight {
+    background: #fffbeb;
+    border-left: 4px solid #f59e0b;
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  .risk {
+    background: #fef2f2;
+    border-left: 4px solid var(--warn);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  .contact-box {
+    background: #eef2ff;
+    border: 1px dashed #a4bafe;
+    border-radius: 10px;
+    padding: 16px 20px;
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  .contact-box b { color: var(--primary-dark); }
+  .src { font-size: 12px; color: var(--muted); margin-top: 14px; }
+  .num-down { color: var(--warn); font-weight: 700; }
+  .num-up { color: var(--accent); font-weight: 700; }
+
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 28px;
+  }
+  @media print {
+    body { background: #fff; padding: 0; }
+    section, .hero, .kpi { box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 头部 -->
+  <div class="hero">
+    <span class="tag">企业调研报告</span>
+    <h1>深圳麦思美汽车电子股份有限公司</h1>
+    <div class="sub">原「深圳市麦思美汽车电子有限公司」｜ 车载信息娱乐系统（IVI）ODM/OEM 厂商 ｜ 新三板代码 874820</div>
+    <div class="meta">调研日期：2026-10-14 ｜ 数据源：天眼查 · 全国股转系统问询回复 · 公司公告 · 公开招聘平台</div>
+  </div>
+
+  <!-- KPI -->
+  <div class="kpis">
+    <div class="kpi"><div class="v">2.49 亿</div><div class="l">2025 年营业收入</div></div>
+    <div class="kpi"><div class="v">3,813 万</div><div class="l">2025 年净利润</div></div>
+    <div class="kpi"><div class="v down">-54.6%</div><div class="l">2026 H1 净利同比</div></div>
+    <div class="kpi"><div class="v">≈97%</div><div class="l">境外收入占比</div></div>
+    <div class="kpi"><div class="v">247 人</div><div class="l">社保人数</div></div>
+    <div class="kpi"><div class="v">874820</div><div class="l">新三板挂牌（2025-07）</div></div>
+  </div>
+
+  <!-- 一、公司概况 -->
+  <section>
+    <h2>一、公司概况</h2>
+    <table>
+      <tr><th style="width:120px">现名</th><td>深圳麦思美汽车电子股份有限公司（2024 年 8 月由有限公司改制更名）</td></tr>
+      <tr><th>成立日期</th><td>2013-09-10</td></tr>
+      <tr><th>注册资本</th><td>3,000 万人民币（总股本 3,000 万股）</td></tr>
+      <tr><th>法定代表人</th><td>郑剑波（董事长兼总经理）</td></tr>
+      <tr><th>实际控制人</th><td>黄荣添、黄敏莹（父女，合计控制约 65% 表决权）</td></tr>
+      <tr><th>注册地址</th><td>深圳市龙岗区坪地街道埔仔路 26 号 2 栋 1-4 层（杰科产业园内，租赁厂房，无自有土地房产）</td></tr>
+      <tr><th>官网</th><td><a href="http://www.maxmade-ae.cn" target="_blank">http://www.maxmade-ae.cn</a></td></tr>
+      <tr><th>主营业务</th><td>车载信息娱乐系统研发、生产、销售（2025 年报主营构成：车载信息娱乐系统 98.5%），ODM/OEM 模式</td></tr>
+      <tr><th>员工规模</th><td>社保人数 247 人（100-499 人档），研发工程师近百名</td></tr>
+      <tr><th>资质认证</th><td>
+        <span class="badge badge-blue">国家高新技术企业</span>
+        <span class="badge badge-blue">专精特新中小企业</span>
+        <span class="badge badge-blue">科技型中小企业</span>
+        <span class="badge badge-gray">IATF16949</span>
+        <span class="badge badge-gray">ISO9001</span><br>
+        截至 2023 年：专利 40 项、软著 29 项、商标 12 项
+      </td></tr>
+      <tr><th>市场定位</th><td>出口导向：2022-2024 年境外收入占比 96.8%-99.4%，主销亚洲、美洲、欧洲、大洋洲</td></tr>
+    </table>
+  </section>
+
+  <!-- 二、融资与上市 -->
+  <section>
+    <h2>二、融资与上市</h2>
+    <ul>
+      <li><b>外部融资：</b>无公开融资记录（天眼查融资历史为空），未引入 VC/PE，股权由创始人及员工持股平台持有。</li>
+      <li><b>新三板挂牌：</b>2025-07-10 在全国股转系统挂牌公开转让，证券代码 <b>874820</b>，简称「麦思美」；主办券商平安证券，发行人律师国浩（深圳），会计师政旦志远。</li>
+      <li><b>分红：</b>2026 年 9 月实施 2026 半年度权益分派，每 10 股派 6 元现金（合计派现 1,800 万元）。</li>
+    </ul>
+    <h3>股东结构</h3>
+    <table>
+      <tr><th>股东</th><th>持股比例</th><th>说明</th></tr>
+      <tr><td>黄荣添</td><td>51.67%</td><td>创始人、实际控制人</td></tr>
+      <tr><td>深圳市滴石企业管理中心（有限合伙）</td><td>28%</td><td>员工持股平台，21 名合伙人（含郑剑波 267 万股）</td></tr>
+      <tr><td>深圳市麦众智联技术企业（有限合伙）</td><td>13.33%</td><td>实控人亲属持股平台，黄敏莹任执行事务合伙人</td></tr>
+      <tr><td>郑剑波</td><td>7%</td><td>董事长兼总经理（非法定实控人）</td></tr>
+    </table>
+    <div class="highlight">历史沿革要点：2014 年曾存在大豆网络代持（实际出资人黄荣添），2020-2021 年已还原确认；挂牌审核经两轮问询，焦点为实控人认定、与杰科数码的同业竞争/独立性、客户信息豁免披露。</div>
+  </section>
+
+  <!-- 三、经营情况 -->
+  <section>
+    <h2>三、经营情况：营收与利润</h2>
+    <table>
+      <tr><th>期间</th><th>营业收入</th><th>净利润</th><th>毛利率</th><th>备注</th></tr>
+      <tr><td>2022</td><td>2.88 亿</td><td>4,531 万</td><td>31.0%</td><td>历史收入高点</td></tr>
+      <tr><td>2023</td><td>2.36 亿</td><td>3,732 万</td><td>36.6%</td><td class="num-down">收入 -18%</td></tr>
+      <tr><td>2024</td><td>2.46 亿</td><td>3,979 万</td><td>36.4%</td><td class="num-up">收入 +4.2%</td></tr>
+      <tr><td>2025</td><td>2.49 亿</td><td>3,813 万</td><td>35.0%</td><td>收入 +1.44%，净利 <span class="num-down">-4.18%</span>，ROE 31.34%</td></tr>
+      <tr><td><b>2026 H1</b></td><td><b>1.06 亿</b></td><td><b>842 万</b></td><td><b>31.8%</b></td><td><span class="num-down">收入 -8.85%，净利 -54.6%（明显承压）</span></td></tr>
+    </table>
+    <ul>
+      <li>总资产 2.40 亿、净资产 1.21 亿（2025 年末）；资产负债率约 43%。</li>
+      <li><b>客户集中度偏高：</b>前五大客户占营收 72%-81%。2024 年 1-8 月前五大：Namsung 3,202.61 万、Mega Audio 3,032.74 万、Promaster 2,818.69 万、Acr Brandli 1,663.90 万、Av Link 1,611.60 万。</li>
+    </ul>
+    <div class="src">[Source: 天眼查 — 上市信息-上市公司财务简析；东方财富/同壁财经 — 874820 财报摘要，截至 2026 半年报]</div>
+  </section>
+
+  <!-- 四、增长与扩张 -->
+  <section>
+    <h2>四、增长与扩张信号</h2>
+
+    <h3>① 招聘：研发持续扩编 <span class="badge badge-green">扩张中</span></h3>
+    <ul>
+      <li>2024-11 批量启动 2025 届校招（Android/Linux 软件、硬件、测试、质量、结构、外贸业务员、SMT 技术员等 10+ 岗位，7-12K）；</li>
+      <li>2025-01 至 03 补招 2025 届（新增 MCU 软件、ADAS 软件、会计等），并高薪社招 <b>Android 开发工程师 20-35K</b>（5-10 年经验）；</li>
+      <li>2025-09 已启动 <b>2026 届校招</b>（测试、硬件工程师）。智联招聘在招职位合计 20 个。</li>
+    </ul>
+
+    <h3>② 产能与业务扩张</h3>
+    <ul>
+      <li>2024 年购置 SMT 贴片设备并投产，结束 SMT 外协，向上游自制延伸；</li>
+      <li>经营范围新增：智能车载设备、卫星移动通信终端、新能源汽车电附件、集成电路芯片设计、检验检测服务；</li>
+      <li>2026 年新设全资子公司 <b>滴石半导体（深圳）有限公司</b>（芯片/半导体器件方向）——最新扩张动作。</li>
+    </ul>
+
+    <h3>③ 行业影响力 <span class="badge badge-gray">中等</span></h3>
+    <ul>
+      <li>专精特新中小企业、国家高新技术企业、新三板挂牌公司、中国汽车工程学会单位会员；</li>
+      <li>未见进入 KPMG 汽车科技 50 等大型排行榜，属细分领域中等影响力。</li>
+    </ul>
+
+    <h3>④ CEO 公开活动 <span class="badge badge-gray">低调</span></h3>
+    <ul>
+      <li>郑剑波公开活动极少，检索不到专访、演讲或公开报道；对外获客主要依托展会与行业渠道（问询回复披露）。</li>
+    </ul>
+  </section>
+
+  <!-- 五、高管及联系方式 -->
+  <section>
+    <h2>五、高管及联系方式</h2>
+    <div class="contact-box">
+      <b>总机：</b>0755-23156669（大陆座机，来源：2025 年年报）<br>
+      <b>备用电话：</b>15112338390（官网/亚洲新能源网页面）<br>
+      <b>邮箱：</b>tuz@maxmade-ae.cn ｜ zhaiq@maxmade-ae.cn ｜ renym@maxmade-ae.cn ｜ zhangxf@maxmade-ae.cn ｜ apapajj@163.com<br>
+      <b>官网：</b>http://www.maxmade-ae.cn<br>
+      <b>地址：</b>深圳市龙岗区坪地街道埔仔路 26 号 2 栋 1-4 层
+    </div>
+    <h3>董监高名单</h3>
+    <table>
+      <tr><th>姓名</th><th>职务</th><th>备注</th></tr>
+      <tr><td>郑剑波</td><td>董事长、总经理</td><td>法定代表人，直接持股 7%</td></tr>
+      <tr><td>黄荣添</td><td>董事</td><td>实际控制人，持股 51.67%</td></tr>
+      <tr><td>黄敏莹</td><td>董事</td><td>实际控制人，黄荣添之女</td></tr>
+      <tr><td>杨太惠</td><td>董事</td><td>—</td></tr>
+      <tr><td>谭建博</td><td>董事</td><td>—</td></tr>
+      <tr><td>翟茜</td><td>监事</td><td>年报公示邮箱 zhaiq@maxmade-ae.cn 与其姓氏拼音吻合</td></tr>
+      <tr><td>沈大勇</td><td>监事</td><td>—</td></tr>
+      <tr><td>赵文华</td><td>监事</td><td>—</td></tr>
+    </table>
+    <div class="highlight"><b>HR 联系方式：</b>无公开直线，建议拨打总机 0755-23156669 转人力资源部。工商公示仅含企业对外公开联系方式，不含高管个人手机号；您表格备注的联系人「熊璐」在公开工商及年报信息中未查到对应联系方式。</div>
+  </section>
+
+  <!-- 六、上下游 -->
+  <section>
+    <h2>六、上下游及关联公司</h2>
+
+    <h3>下游客户（问询回复披露）</h3>
+    <table>
+      <tr><th>客户</th><th>背景</th></tr>
+      <tr><td>Namsung（韩国/美国）</td><td>1965 年成立的后装品牌商，CES 2021 最佳创新奖；2022 年第一大客户（6,558 万，占 22.78%）</td></tr>
+      <tr><td>Mega Audio International</td><td>现代摩比斯印度（Mobis India）授权制造商，终端配套现代雅绅特印度车型；2023 年采购 4,371 万，为当年增长主因</td></tr>
+      <tr><td>Promaster</td><td>OEM 企业，下游配套丰田、现代、起亚</td></tr>
+      <tr><td>Acr Brandli</td><td>1977 年成立，合作多年</td></tr>
+      <tr><td>Av Link</td><td>大发、铃木、五十铃等整车厂上游配套商</td></tr>
+      <tr><td>OE Works Manufacturing INC.</td><td>第二轮问询补充披露客户</td></tr>
+    </table>
+
+    <h3>上游供应商（问询回复披露的部分名单）</h3>
+    <ul>
+      <li>广东微容电子科技、深圳市山田高科技、世平国际（香港）、深圳市福泰创展、品佳股份——主要为集成电路、电子元器件、PCB、塑胶五金、包材供应商（与杰科数码存在部分重叠，同园区共用料所致）。</li>
+    </ul>
+
+    <h3>子公司与关联方</h3>
+    <table>
+      <tr><th>主体</th><th>关系</th><th>说明</th></tr>
+      <tr><td>深圳市麦思美软件技术有限公司</td><td>全资子公司（1,000 万）</td><td>软件/嵌入式开发、集成电路设计</td></tr>
+      <tr><td>深圳市承旗贸易有限公司</td><td>全资子公司（100 万）</td><td>电子元器件、导航终端零售</td></tr>
+      <tr><td>滴石半导体（深圳）有限公司</td><td>全资子公司（100 万，2026 年设立）</td><td>半导体分立器件、芯片销售——最新扩张动作</td></tr>
+      <tr><td>麦思美（香港）有限公司</td><td>香港子公司（2019 年设立）</td><td>跨境贸易/销售平台</td></tr>
+      <tr><td>深圳市杰科数码有限公司</td><td>实控人关联企业</td><td>机顶盒/智能影音，同园区，曾有 SMT 外协及房屋租赁关联交易（已承诺避免同业竞争）</td></tr>
+      <tr><td>深圳市杰科电子有限公司</td><td>实控人关联企业</td><td>房东（年租金约 374 万）</td></tr>
+      <tr><td>深圳市麦思美科技有限公司</td><td>历史股东（已退出）</td><td>消费电子（蓝光播放器等），实控人卢宏</td></tr>
+      <tr><td>滴石企业管理中心 / 麦众智联</td><td>股东/持股平台</td><td>员工激励与实控人亲属持股平台</td></tr>
+    </table>
+  </section>
+
+  <!-- 七、风险提示 -->
+  <section>
+    <h2>七、风险提示</h2>
+    <div class="risk">
+      <ol style="padding-left:20px">
+        <li><b>2026 年上半年业绩明显下滑：</b>收入 -8.85%、净利 -54.6%、毛利率降至 31.8%；</li>
+        <li><b>客户集中度高</b>（前五大占 72-81%），且几乎全为境外客户，受海外车市及汇率影响大；</li>
+        <li>无自有房产，生产经营场所全部租赁自关联方；</li>
+        <li>挂牌问询曾关注同业竞争、代持历史、客户豁免披露等事项，均已回复确认，但可作为尽职调查线索。</li>
+      </ol>
+    </div>
+  </section>
+
+  <footer>
+    数据来源：天眼查（工商信息-企业基本信息/主要人员/企业股东/对外投资、上市信息-上市公司财务简析、经营信息-企业招聘，数据更新至 2026-10-12）｜
+    全国股转系统挂牌问询回复（2025-04 / 2025-05 披露）｜ 东方财富/同壁财经（2025 年报及 2026 半年报摘要）｜ 公司官网及公开资料<br>
+    本报告基于公开信息整理，仅供商务参考，不构成投资建议。
+  </footer>
+
+</div>
+</body>
+</html>
