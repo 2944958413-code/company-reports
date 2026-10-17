@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>豆包工作 × 飞书套件 · 价格与销售政策手册</title>
+<style>
+  :root{
+    --ink:#1a2332; --sub:#5b6b80; --line:#e4e9f0; --bg:#f5f7fa;
+    --accent:#c8372d; --accent2:#1f4e8c; --gold:#b8860b;
+    --ok:#15803d; --no:#b91c1c; --warn-bg:#fff7ed; --warn-line:#fdba74;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.75}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+  /* ===== Hero ===== */
+  .hero{background:linear-gradient(135deg,#17233b 0%,#1f4e8c 60%,#2b6cb0 100%);color:#fff;padding:72px 0 56px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;right:-120px;top:-120px;width:380px;height:380px;border-radius:50%;background:rgba(255,255,255,.06)}
+  .hero::before{content:"";position:absolute;right:60px;bottom:-160px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.05)}
+  .badge{display:inline-block;background:var(--accent);color:#fff;font-size:13px;font-weight:700;letter-spacing:2px;padding:5px 16px;border-radius:4px;margin-bottom:20px}
+  .hero h1{font-size:34px;font-weight:800;letter-spacing:1px;margin-bottom:12px}
+  .hero p.sub{color:#c9d8ec;font-size:15px;max-width:640px}
+  .hero .meta{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+  .chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:4px 14px;font-size:12.5px;color:#dbe7f5}
+
+  /* ===== Nav ===== */
+  nav.toc{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(20,40,70,.06)}
+  nav.toc .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:0;padding-bottom:0}
+  nav.toc a{white-space:nowrap;padding:14px 14px;font-size:13.5px;color:var(--sub);text-decoration:none;border-bottom:3px solid transparent;font-weight:600}
+  nav.toc a:hover{color:var(--accent2);border-bottom-color:var(--accent2)}
+
+  /* ===== Sections ===== */
+  section{padding:56px 0 8px}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+  .sec-num{font-size:13px;font-weight:800;color:#fff;background:var(--accent2);border-radius:6px;padding:3px 10px;letter-spacing:1px}
+  .sec-head h2{font-size:26px;font-weight:800;letter-spacing:.5px}
+  .sec-desc{color:var(--sub);font-size:14px;margin-bottom:26px}
+
+  /* ===== Cards ===== */
+  .grid{display:grid;gap:16px}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:900px){.g4{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:640px){.g2{grid-template-columns:1fr}.g4{grid-template-columns:1fr}.hero h1{font-size:26px}}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;position:relative;transition:box-shadow .2s}
+  .card:hover{box-shadow:0 6px 20px rgba(20,40,70,.08)}
+  .card .price{font-size:26px;font-weight:800;color:var(--accent);margin:6px 0 2px}
+  .card .price small{font-size:13px;color:var(--sub);font-weight:500}
+  .card h3{font-size:16px;font-weight:700}
+  .card .thr{display:inline-block;font-size:12px;background:#eef3fa;color:var(--accent2);border-radius:4px;padding:2px 10px;margin:8px 0;font-weight:600}
+  .card p{font-size:13.5px;color:var(--sub)}
+  .card.top{border-top:4px solid var(--gold)}
+  .tag-top{position:absolute;top:-11px;right:16px;background:var(--gold);color:#fff;font-size:11px;font-weight:700;padding:2px 10px;border-radius:10px;letter-spacing:1px}
+
+  /* ===== Tables ===== */
+  .tbl-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:12px;margin:18px 0}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:640px}
+  th{background:#17233b;color:#fff;text-align:left;padding:12px 14px;font-weight:600;white-space:nowrap}
+  td{padding:11px 14px;border-top:1px solid var(--line);vertical-align:top}
+  tr:nth-child(even) td{background:#f8fafc}
+  td.em{font-weight:700;color:var(--accent2)}
+  .y{color:var(--ok);font-weight:700}
+  .n{color:var(--no);font-weight:700}
+  .cond{color:var(--gold);font-weight:700;font-size:12.5px}
+
+  /* ===== Notices ===== */
+  .note{background:var(--warn-bg);border-left:4px solid var(--warn-line);border-radius:0 8px 8px 0;padding:14px 18px;margin:18px 0;font-size:13.5px;color:#7c4a03}
+  .note b{color:#9a3412}
+  .note.blue{background:#eff6ff;border-left-color:#60a5fa;color:#1e3a5f}
+  .note.blue b{color:#1d4ed8}
+
+  /* ===== Role layers ===== */
+  .role{display:flex;gap:16px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;margin-bottom:14px;align-items:flex-start}
+  .role .arrow{font-size:20px;color:var(--accent);font-weight:800;flex-shrink:0;margin-top:2px}
+  .role h4{font-size:15px;font-weight:700;color:var(--accent2);margin-bottom:4px}
+  .role p{font-size:13.5px;color:var(--sub)}
+
+  /* ===== Version detail ===== */
+  .ver{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px;margin-bottom:20px}
+  .ver h3{font-size:18px;font-weight:800;margin-bottom:2px}
+  .ver .pline{color:var(--accent);font-weight:700;font-size:14px;margin-bottom:14px}
+  .ver dl{display:grid;grid-template-columns:110px 1fr;gap:8px 14px;font-size:13.5px}
+  .ver dt{font-weight:700;color:var(--accent2);white-space:nowrap}
+  .ver dd{color:#37465a}
+  @media(max-width:640px){.ver dl{grid-template-columns:1fr}}
+
+  /* ===== Steps ===== */
+  .step{display:flex;gap:20px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px;margin-bottom:16px}
+  .step .no{font-size:13px;font-weight:800;color:#fff;background:var(--accent);border-radius:8px;padding:6px 12px;height:fit-content;letter-spacing:1px;white-space:nowrap}
+  .step h4{font-size:16px;font-weight:700;margin-bottom:8px}
+  .step ul{list-style:none;font-size:13.5px;color:#37465a}
+  .step li{padding-left:18px;position:relative;margin-bottom:5px}
+  .step li::before{content:"▸";position:absolute;left:0;color:var(--accent)}
+  .combo{background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent2);border-radius:0 12px 12px 0;padding:16px 20px}
+  .combo h4{font-size:14.5px;font-weight:700;color:var(--accent2)}
+  .combo p{font-size:13.5px;color:#37465a}
+
+  footer{margin-top:70px;background:#17233b;color:#8fa3bd;text-align:center;padding:34px 20px;font-size:12.5px;line-height:2}
+  footer b{color:#c9d8ec}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="badge">内部资料 · 注意保密</span>
+    <h1>豆包工作 × 飞书套件<br>价格与销售政策手册</h1>
+    <p class="sub">价格总览 · 销售折扣 · 人员分层 · 版本说明 · 功能矩阵 · 采购建议 · 计费提醒 —— 报价前请通读本手册，最终政策以正式合同及最新权益清单为准。</p>
+    <div class="meta">
+      <span class="chip">豆包团队 / 精英 / 企业旗舰 / 企业尊享</span>
+      <span class="chip">飞书套件 F4 / A1 / A2</span>
+      <span class="chip">AI 用量套餐目录价</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc">
+  <div class="wrap">
+    <a href="#s1">01 价格总览</a>
+    <a href="#s2">02 销售折扣</a>
+    <a href="#s3">03 人员分层</a>
+    <a href="#s4">04 版本说明</a>
+    <a href="#s5">05 功能矩阵</a>
+    <a href="#s6">06 采购建议</a>
+    <a href="#s7">07 计费提醒</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- ============ 01 价格总览 ============ -->
+<section id="s1">
+  <div class="sec-head"><span class="sec-num">01</span><h2>价格总览</h2></div>
+  <p class="sec-desc">豆包工作提供从个人体验到企业级 AI 的多档选择，按团队规模和 AI 深度分层。</p>
+
+  <div class="grid g4">
+    <div class="card">
+      <h3>豆包团队订阅</h3>
+      <div class="price">¥1,988<small> / 席 / 年</small></div>
+      <span class="thr">1 席起售</span>
+      <p>AI 办公小团队，灵活购买，月付 / 年付均可。</p>
+    </div>
+    <div class="card">
+      <h3>豆包精英订阅</h3>
+      <div class="price" style="font-size:17px;line-height:1.5">¥6,800 / 11,880 / 19,800<br>39,800 / 99,900 / 198,000</div>
+      <span class="thr">10 / 30 / 50 / 100 / 300 / 500 人档</span>
+      <p>全员购买 · 6 档套餐，按人数打包，性价比高，适合中小团队。</p>
+    </div>
+    <div class="card">
+      <h3>豆包企业订阅 · 旗舰</h3>
+      <div class="price">¥1,200<small> / 席 / 年</small></div>
+      <span class="thr">100 席起 · 仅年付</span>
+      <p>企业级协同 + 基础 AI，需搭配用量套餐。</p>
+    </div>
+    <div class="card top">
+      <span class="tag-top">TOP TIER</span>
+      <h3>豆包企业订阅 · 尊享</h3>
+      <div class="price">¥2,640<small> / 席 / 年</small></div>
+      <span class="thr">100 席起 · 仅年付</span>
+      <p>企业级 AI + 高阶协同 + 安全合规，需搭配用量套餐。</p>
+    </div>
+  </div>
+
+  <h3 style="margin:34px 0 6px;font-size:18px">AI 用量套餐（附加包）</h3>
+  <p class="sec-desc" style="margin-bottom:10px">AI 点数按企业共享，管理员分配与管控。企业旗舰 / 尊享订阅必须搭配 ¥99,000 起的企业用量套餐。</p>
+  <div class="tbl-wrap">
+    <table>
+      <tr><th>用量包类型</th><th>价格</th><th>说明</th></tr>
+      <tr><td class="em">团队用量套餐（年包）</td><td>¥9,900 / 年（18 万点）</td><td>团队订阅客户加购，可解锁全部模型（含 Seedance 2.0/2.5）</td></tr>
+      <tr><td class="em">团队用量套餐（月包）</td><td>¥990 / 月（1.5 万点）</td><td>灵活按月购买，适合试用或短期项目</td></tr>
+      <tr><td class="em">企业用量套餐 · 200 万点</td><td>¥99,000 / 个 / 年</td><td>企业入门档，团队 / 企业订阅客户均可购买</td></tr>
+      <tr><td class="em">企业用量套餐 · 600 万点</td><td>¥297,000 / 个 / 年</td><td>中大型企业，知识问答 API 自此档起可申请</td></tr>
+      <tr><td class="em">企业用量套餐 · 2000 万点</td><td>¥990,000 / 个 / 年</td><td>大型 / 集团客户，大额 AI 消耗场景</td></tr>
+      <tr><td class="em">飞书 AI 基础版</td><td>¥9,900 / 年（18 万点）</td><td>飞书套件客户轻量化加购，仅用于飞书相关 AI 功能；豆包工作仅体验不消耗</td></tr>
+    </table>
+  </div>
+  <div class="note"><b>注意：</b>AI 产品（用量套餐）不支持折扣，按目录价销售。</div>
+</section>
+
+<!-- ============ 02 销售折扣 ============ -->
+<section id="s2">
+  <div class="sec-head"><span class="sec-num">02</span><h2>销售折扣</h2></div>
+  <p class="sec-desc">席位版按阶梯折扣执行，AI 用量包无折扣。折扣为目录价百分比。</p>
+
+  <h3 style="font-size:16px;margin-bottom:4px">豆包工作席位折扣</h3>
+  <div class="tbl-wrap">
+    <table>
+      <tr><th>席位区间</th><th>团队订阅 ¥1,988/席/年</th><th>精英订阅</th><th>企业旗舰 ¥1,200/席/年</th><th>企业尊享 ¥2,640/席/年</th></tr>
+      <tr><td class="em">&lt; 100 席</td><td>目录价</td><td>按套餐档目录价</td><td>不支持购买</td><td>不支持购买</td></tr>
+      <tr><td class="em">100–299 席</td><td>目录价</td><td>按套餐档目录价</td><td>以审批为准</td><td>以审批为准</td></tr>
+      <tr><td class="em">300–999 席</td><td>目录价</td><td>按套餐档目录价</td><td>以审批为准</td><td>以审批为准</td></tr>
+      <tr><td class="em">1000 席以上</td><td>目录价</td><td>按套餐档目录价</td><td>以审批为准</td><td>以审批为准</td></tr>
+    </table>
+  </div>
+  <div class="note blue">
+    <b>折扣说明</b>
+    <ul style="margin:6px 0 0 18px;font-size:13px">
+      <li>AI 产品（用量套餐）不支持折扣，一律目录价销售。</li>
+      <li>席位版折扣需走审批流程：标准折扣 Sales → DM；非标折扣需加签 Sales Leader 及 Special Price。</li>
+      <li>豆包精英订阅为打包套餐价，按人数档位直接报价。</li>
+      <li>实际成交价以最终审批结果为准。</li>
+    </ul>
+  </div>
+
+  <h3 style="font-size:16px;margin:26px 0 4px">飞书套件折扣（简化版）</h3>
+  <div class="tbl-wrap">
+    <table>
+      <tr><th>飞书版本</th><th>目录价</th><th>一线折扣</th><th>DM 底价</th></tr>
+      <tr><td class="em">商业标准版（F4 Std）</td><td>¥600 / 人 / 年</td><td>100%</td><td>90%</td></tr>
+      <tr><td class="em">商业专业版（F4 Pro）</td><td>¥960 / 人 / 年</td><td>90%</td><td>80%</td></tr>
+      <tr><td class="em">企业领航版（F4 Avd）</td><td>¥1,440 / 人 / 年</td><td>阶梯折扣</td><td>阶梯折扣</td></tr>
+      <tr><td class="em">企业旗舰版（F4 Orem）</td><td>¥2,640 / 人 / 年</td><td>阶梯折扣</td><td>阶梯折扣</td></tr>
+      <tr><td class="em">一线标准版（A1）</td><td>¥180 / 人 / 年</td><td>阶梯折扣</td><td>阶梯折扣</td></tr>
+      <tr><td class="em">一线专业版（A2）</td><td>¥360 / 人 / 年</td><td>阶梯折扣</td><td>阶梯折扣</td></tr>
+    </table>
+  </div>
+  <p style="font-size:13px;color:var(--sub)">详细阶梯折扣表请查阅内部价格表，报价低于一线折扣价须先走 DM 审批。</p>
+</section>
+
+<!-- ============ 03 人员分层 ============ -->
+<section id="s3">
+  <div class="sec-head"><span class="sec-num">03</span><h2>人员分层</h2></div>
+  <p class="sec-desc">按角色配置许可证，混合采购更合理 —— 同一组织可根据岗位角色混合配置不同版本，避免让纯执行岗位承担不需要的功能成本。</p>
+
+  <div class="role"><span class="arrow">→</span><div>
+    <h4>豆包企业订阅 · 尊享</h4>
+    <p>核心管理层、高频 AI 岗位、知识型员工。需要企业 AI 任务执行、深度调研、多模态内容生成、企业知识问答、策略中心与 Agent 安全。</p>
+  </div></div>
+  <div class="role"><span class="arrow">→</span><div>
+    <h4>豆包团队订阅 / 精英订阅</h4>
+    <p>中小企业、AI 办公团队。需要豆包工作基础能力（PPT / 表格 / 文档生成、知识问答），但暂不需要企业级安全合规与项目 AI。</p>
+  </div></div>
+  <div class="role"><span class="arrow">→</span><div>
+    <h4>飞书企业领航版 + 飞书 AI 基础版</h4>
+    <p>以协作和业务系统使用为主，暂不需要完整企业 AI 的办公室员工。</p>
+  </div></div>
+  <div class="role"><span class="arrow">→</span><div>
+    <h4>飞书一线标准版 / 专业版（A1 / A2）</h4>
+    <p>一线员工只需移动端接任务、填表、参会；主管需要全端汇总数据。</p>
+  </div></div>
+</section>
+
+<!-- ============ 04 版本说明 ============ -->
+<section id="s4">
+  <div class="sec-head"><span class="sec-num">04</span><h2>版本说明</h2></div>
+  <p class="sec-desc">豆包工作各版本功能边界。</p>
+
+  <div class="ver">
+    <h3>豆包团队订阅</h3>
+    <div class="pline">¥1,988 / 席 / 年 · 1 席起售 · 年付 / 月付</div>
+    <dl>
+      <dt>适合</dt><dd>10–100 人规模的 AI 办公小团队</dd>
+      <dt>AI 权益</dt><dd>席位自带 2,000 点额度 / 席 / 月；10 月 31 日前购买额外赠送 2,000 点</dd>
+      <dt>核心能力</dt><dd>豆包工作基础（PPT / 表格 / 文档 / 图片生成）、智能纪要、多维表格 AI、妙搭基础、aily 企业工作伙伴</dd>
+      <dt>视频生成</dt><dd>席位额度可用 Seedance mini / fast；加购团队用量套餐后可用 2.0 / 2.5</dd>
+      <dt>不包含</dt><dd>高管模式、知识问答 API、飞书项目 AI、CodeM、生态应用 AI、工作流应用</dd>
+      <dt>飞书协同</dt><dd>基础版级别（1T 云盘、25 方会议、300 分钟妙记）</dd>
+    </dl>
+  </div>
+
+  <div class="ver">
+    <h3>豆包精英订阅</h3>
+    <div class="pline">按人数套餐 · 10 / 30 / 50 / 100 / 300 / 500 人档 · 仅年付</div>
+    <dl>
+      <dt>适合</dt><dd>全员购买的中小企业，追求性价比</dd>
+      <dt>AI 权益</dt><dd>与团队订阅类似，但打包价格更优惠</dd>
+      <dt>核心能力</dt><dd>豆包工作全套、智能纪要、多维表格 AI、妙搭、文档 AI 速览、集成平台 AI</dd>
+      <dt>视频生成</dt><dd>仅 Seedance mini / fast（席位额度）</dd>
+      <dt>飞书协同升级</dt><dd>50 方会议、5T 云盘、6,000 封日发信量、会中投票 / 等候室、无限制妙记</dd>
+      <dt>不包含</dt><dd>高管模式、知识问答 API、飞书项目 AI、CodeM、生态应用 AI、企业级安全合规</dd>
+    </dl>
+  </div>
+
+  <div class="ver">
+    <h3>豆包企业订阅 · 旗舰</h3>
+    <div class="pline">¥1,200 / 席 / 年 · 100 席起 · 仅年付 · 需搭配企业用量套餐</div>
+    <dl>
+      <dt>适合</dt><dd>有企业级管理和安全需求，但 AI 使用量中等的中大型企业</dd>
+      <dt>AI 权益</dt><dd>席位不含额度，必须搭配 ¥99,000 起的企业用量套餐</dd>
+      <dt>核心 AI 升级</dt><dd>视频生成可用 Seedance 2.0 / 2.5、aily 工作流应用、Logo 名称定制、飞书 CodeM、飞书项目 AI 全套、生态应用 AI</dd>
+      <dt>安全合规</dt><dd>自主密钥高级版、DLP、密级管理、截屏录屏保护、策略中心、智能体管理</dd>
+      <dt>组织管理</dt><dd>可关联 100 个组织、300 个自定义管理员角色、动态用户组、集团单位管理</dd>
+      <dt>飞书协同</dt><dd>15T 云盘、25 方会议、300 分钟妙记</dd>
+    </dl>
+  </div>
+
+  <div class="ver" style="border-color:var(--gold)">
+    <h3>豆包企业订阅 · 尊享 <span style="font-size:11px;background:var(--gold);color:#fff;border-radius:8px;padding:2px 8px;vertical-align:middle">TOP TIER</span></h3>
+    <div class="pline">¥2,640 / 席 / 年 · 100 席起 · 仅年付 · 需搭配企业用量套餐</div>
+    <dl>
+      <dt>适合</dt><dd>大型 / 集团客户，对 AI 深度、协同规模和品牌定制有最高要求</dd>
+      <dt>AI 权益</dt><dd>与旗舰一致，需搭配企业用量套餐</dd>
+      <dt>核心升级</dt><dd>高管模式、知识问答 API（有条件申请）、300 万篇可搜文档</dd>
+      <dt>会议升级</dt><dd>1,000 方同时参会、24 小时时长、3,000 分钟 PSTN、同声传译、分组讨论、网络研讨会</dd>
+      <dt>组织管理</dt><dd>与旗舰一致（100 关联组织、300 管理员角色）</dd>
+      <dt>品牌自定义</dt><dd>自定义导航 / 表情包 / 皮肤 / 开屏 / 红包封面 / 企业勋章 / 词典定制</dd>
+      <dt>其他</dt><dd>公司圈、定制工作台、500 个服务台、搜索连接器 1T、OpenAPI 无限制</dd>
+    </dl>
+  </div>
+
+  <h3 style="font-size:16px;margin:28px 0 4px">飞书套件版本（简化说明）</h3>
+  <div class="tbl-wrap">
+    <table>
+      <tr><th>版本</th><th>目录价</th><th>定位</th></tr>
+      <tr><td class="em">飞书免费版</td><td>免费</td><td>基础协同，100 人以内，功能受限</td></tr>
+      <tr><td class="em">商业标准版 F4 Std</td><td>¥600 / 人 / 年</td><td>小型企业，需要企业邮箱等基础能力</td></tr>
+      <tr><td class="em">商业专业版 F4 Pro</td><td>¥960 / 人 / 年</td><td>成长型中小企业，需要多维表格高级权限、服务台等</td></tr>
+      <tr><td class="em">企业领航版 F4 Avd</td><td>¥1,440 / 人 / 年</td><td>中型企业协同底座，可搭配 AI 包</td></tr>
+      <tr><td class="em">企业旗舰版 F4 Orem</td><td>¥2,640 / 人 / 年</td><td>大型 / 集团客户，最高阶协同与安全</td></tr>
+      <tr><td class="em">一线标准版 A1</td><td>¥180 / 人 / 年</td><td>仅移动端，一线蓝领员工</td></tr>
+      <tr><td class="em">一线专业版 A2</td><td>¥360 / 人 / 年</td><td>全端，一线主管与执行岗</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 05 功能矩阵 ============ -->
+<section id="s5">
+  <div class="sec-head"><span class="sec-num">05</span><h2>功能矩阵</h2></div>
+  <p class="sec-desc">豆包工作核心功能对比。<span class="y">✓</span> 包含 · <span class="n">—</span> 不包含</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <tr><th>功能模块</th><th>团队订阅</th><th>精英订阅</th><th>企业旗舰</th><th>企业尊享</th></tr>
+      <tr><td colspan="5" style="background:#eef3fa;font-weight:700;color:var(--accent2)">豆包工作基础</td></tr>
+      <tr><td class="em">免费版权益 + 高峰期优先</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td class="em">2.1 Pro 模型 / 定时任务</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td class="em">AI PPT / 表格 / 文档</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td class="em">图片生成</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td class="em">视频生成（Seedance）</td><td>mini / fast</td><td>mini / fast</td><td class="y">2.0 / 2.5</td><td class="y">2.0 / 2.5</td></tr>
+      <tr><td class="em">企业全域知识问答</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td class="em">高管模式</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+      <tr><td class="em">知识问答 API</td><td class="n">—</td><td class="n">—</td><td class="cond">有条件申请</td><td class="cond">有条件申请</td></tr>
+      <tr><td class="em">可搜文档上限</td><td>100 万</td><td>100 万</td><td class="y">300 万</td><td class="y">300 万</td></tr>
+      <tr><td colspan="5" style="background:#eef3fa;font-weight:700;color:var(--accent2)">豆包工作伙伴（aily）</td></tr>
+      <tr><td class="em">豆包工作伙伴</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td class="em">企业工作伙伴 API / SDK</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td class="em">工作流应用 / API / Logo 定制</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td colspan="5" style="background:#eef3fa;font-weight:700;color:var(--accent2)">多维表格 AI</td></tr>
+      <tr><td class="em">AI 字段捷径</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td class="em">生成公式 / 搭建工作流 / Agent 节点</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td class="em">仪表盘智能分析</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td colspan="5" style="background:#eef3fa;font-weight:700;color:var(--accent2)">妙搭</td></tr>
+      <tr><td class="em">网页 / 应用搭建 / OpenClaw / 去水印</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td class="em">应用数量</td><td>无限制</td><td>无限制</td><td>无限制</td><td>无限制</td></tr>
+      <tr><td class="em">自定义域名 / 敏感操作管控</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td colspan="5" style="background:#eef3fa;font-weight:700;color:var(--accent2)">其他 AI 能力</td></tr>
+      <tr><td class="em">文档 AI 速览</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td class="em">智能纪要全套</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td class="em">飞书 CodeM</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td class="em">飞书项目 AI 全套</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td class="em">生态应用 AI（合同 / CRM / HCM 等）</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td></tr>
+      <tr><td class="em">集成平台 AI 节点</td><td class="n">—</td><td class="y">✓</td><td class="y">✓</td><td class="y">✓</td></tr>
+    </table>
+  </div>
+
+  <h3 style="font-size:16px;margin:28px 0 4px">飞书协同关键差异（简化）</h3>
+  <div class="tbl-wrap">
+    <table>
+      <tr><th>能力项</th><th>团队订阅</th><th>精英订阅</th><th>企业旗舰</th><th>企业尊享</th></tr>
+      <tr><td class="em">云盘存储</td><td>1T</td><td>5T</td><td>15T</td><td>15T + 扩容</td></tr>
+      <tr><td class="em">视频会议人数</td><td>25 方</td><td>50 方</td><td>25 方</td><td class="y">1,000 方</td></tr>
+      <tr><td class="em">妙记（语音转文字）</td><td>300 分 / 人 / 月</td><td>不限</td><td>300 分 / 人 / 月</td><td>不限</td></tr>
+      <tr><td class="em">可关联组织数</td><td>10</td><td>10</td><td>100</td><td>100</td></tr>
+      <tr><td class="em">自定义管理员角色</td><td>30</td><td>30</td><td>300</td><td>300</td></tr>
+      <tr><td class="em">高级安全合规</td><td class="n">—</td><td>自主密钥基础版</td><td class="y">全套</td><td class="y">全套</td></tr>
+      <tr><td class="em">品牌自定义</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="y">✓</td></tr>
+      <tr><td class="em">OpenAPI 调用</td><td>无限制</td><td>100 万次 / 月</td><td>无限制</td><td>无限制</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 06 采购建议 ============ -->
+<section id="s6">
+  <div class="sec-head"><span class="sec-num">06</span><h2>采购建议</h2></div>
+  <p class="sec-desc">三步完成方案选型。</p>
+
+  <div class="step"><span class="no">STEP 01</span><div>
+    <h4>判断客户规模与预算</h4>
+    <ul>
+      <li>10–100 人小团队 → 优先推荐豆包精英订阅（打包价性价比高）或豆包团队订阅（灵活 1 席起）</li>
+      <li>100 人以上中大型企业 → 优先推荐企业旗舰或尊享，搭配用量套餐</li>
+    </ul>
+  </div></div>
+  <div class="step"><span class="no">STEP 02</span><div>
+    <h4>确认 AI 使用深度</h4>
+    <ul>
+      <li>只是日常办公辅助（写文档、做 PPT、简单问答）→ 团队 / 精英订阅 + 基础用量包即可</li>
+      <li>需要企业知识问答、aily 工作流、项目 AI、CodeM → 企业旗舰起步</li>
+      <li>需要 API 调用、高管模式、深度定制 Agent → 企业尊享 + 600 万点以上用量包</li>
+    </ul>
+  </div></div>
+  <div class="step"><span class="no">STEP 03</span><div>
+    <h4>评估飞书协同需求</h4>
+    <ul>
+      <li>已有飞书套件 → 直接加购豆包工作席位和用量包</li>
+      <li>新客户从零开始 → 推荐豆包企业订阅（含飞书协同底座）</li>
+      <li>有大量一线员工 → 混合配置：办公室买企业版 + 一线买 A1 / A2</li>
+    </ul>
+  </div></div>
+
+  <h3 style="font-size:16px;margin:28px 0 12px">推荐组合示例</h3>
+  <div class="grid g2">
+    <div class="combo"><h4>50 人创业公司</h4><p>豆包精英订阅（50 人档）+ 团队用量套餐年包</p></div>
+    <div class="combo"><h4>200 人成长型企业</h4><p>豆包团队订阅（全员）+ 企业用量套餐 200 万点</p></div>
+    <div class="combo"><h4>500 人中大型企业</h4><p>企业旗舰（白领全员）+ 企业用量套餐 600 万点 + 一线版（一线员工）</p></div>
+    <div class="combo"><h4>集团客户</h4><p>企业尊享（核心岗位）+ 企业领航版（普通办公室）+ 一线版 + 2000 万点用量包</p></div>
+  </div>
+</section>
+
+<!-- ============ 07 计费提醒 ============ -->
+<section id="s7">
+  <div class="sec-head"><span class="sec-num">07</span><h2>计费提醒</h2></div>
+  <p class="sec-desc">报价前必须明确的事项（Pricing Notice）。</p>
+
+  <div class="tbl-wrap">
+    <table>
+      <tr><th style="width:220px">事项</th><th>说明</th></tr>
+      <tr><td class="em">目录价 ≠ 最终报价</td><td>所有目录价均需结合折扣审批与最终合同确认。</td></tr>
+      <tr><td class="em">AI 用量包不打折</td><td>团队用量套餐、企业用量套餐均按目录价销售，无折扣空间。</td></tr>
+      <tr><td class="em">企业版必须搭配用量包</td><td>豆包企业订阅（旗舰 / 尊享）席位不含 AI 点数，必须搭配 ¥99,000 起的企业用量套餐。</td></tr>
+      <tr><td class="em">额度消耗优先级</td><td>团队席位额度 → 团队共享额度 → 团队用量套餐 → 企业通用额度 → 免费额度 → 个人额度。</td></tr>
+      <tr><td class="em">额度不结转</td><td>有效期内未用完的额度不予结转，按周期清零。</td></tr>
+      <tr><td class="em">单次不拆分扣减</td><td>单次消耗超出当前优先级额度余额时，不会继续扣减下一优先级，也不补扣。</td></tr>
+      <tr><td class="em">视频生成限制</td><td>团队席位额度和赠送额度不可用于 Seedance 2.0 / 2.5 模型，需用量套餐额度。</td></tr>
+      <tr><td class="em">多维表格 AI 免费额度调整</td><td>2026 年 10 月起逐步取消企业租户免费额度，可申请保留。</td></tr>
+      <tr><td class="em">用量包可叠加</td><td>多个用量套餐时，功能权益以最高版本为准，额度优先消耗最早到期的。</td></tr>
+    </table>
+  </div>
+
+  <h3 style="font-size:16px;margin:28px 0 4px">试用政策要点</h3>
+  <div class="tbl-wrap">
+    <table>
+      <tr><th style="width:220px">项目</th><th>政策</th></tr>
+      <tr><td class="em">企业用量套餐试用</td><td>支持 C360 申请累计 ≤ 30 天 200 万点套餐试用，二次申请需 case by case。</td></tr>
+      <tr><td class="em">飞书 AI 基础版试用</td><td>仅支持 1 次 ≤ 7 天试用，从 C360 直接申请。</td></tr>
+      <tr><td class="em">一线版试用</td><td>已付费 F5 客户可申请，单次 &gt; 7 天触发非标审批。</td></tr>
+    </table>
+  </div>
+
+  <div class="note"><b>最终说明：</b>最终以正式合同、订单及最新权益清单为准。部分产品能力可能分阶段上线，报价前请确认最新政策。</div>
+</section>
+
+</main>
+
+<footer>
+  <b>豆包工作 × 飞书套件 · 价格与销售政策手册</b><br>
+  内部资料 · 注意保密 · 请勿外传<br>
+  最终以正式合同、订单及最新权益清单为准
+</footer>
+
+</body>
+</html>
